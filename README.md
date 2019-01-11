@@ -7,4 +7,3 @@
 > ### Ideas for webpage hosting
 > - We may be able to use github pages for the webpage generation as that is what js-parsons used for their example and it worked just fine.
 > - We could use AWS to host it.
-> - We could ask IT to host it.
