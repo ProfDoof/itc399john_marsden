@@ -20,10 +20,27 @@
         <script src="./lib/lis.js"></script>
         <script src="./parsons.js"></script>
         <script>
-        var initial = 'def is_true(boolean_value):\n' +
-                      '  if boolean_value:\n' +
-                      '    return True\n' +
-                      '  return False\n'
+        var ParsonsCodeline = function(codestring, widget) {
+          this.widget = widget;
+          this.code = "";
+          this.indent = 0;
+          this._toggles = [];
+          if (codestring) {
+            // Consecutive lines to be dragged as a single block of code have strings "\\n" to
+            // represent newlines => replace them with actual new line characters "\n"
+            this.code = codestring.replace(/#distractor\s*$/, "").replace(/^\s*(.*?)\s*$/, "$1").replace(/\\n/g, "\n");
+            this.indent = codestring.length - codestring.replace(/^\s+/, "").length;
+          }
+        };
+        var test = new ParsonsCodeline('#include <iostream>\n', {})
+        alert(test.code)
+        var initial = '#include <iostream>\n' +
+                      'using namespace std;\n' +
+                      '\n' +
+                      'int main () {\n' +
+                      '  int comparator = 0;\n' +
+                      '  int input;\n' +
+                      '  cout << \"Enter Number: \";\n'
 
         $(document).ready(function(){
             var parson = new ParsonsWidget({
