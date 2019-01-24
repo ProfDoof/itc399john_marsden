@@ -30,7 +30,11 @@
         <script src="../lib/skulpt.js"></script>
         <script src="../lib/skulpt-stdlib.js"></script>
         <script>
-        var initial = 'IF $$toggle::a::b$$ $$toggle::<::>::<>$$ b THEN\n  min := a\nELSE\n  min := b\nENDIF';
+        var initial = 'IF $$toggle::a::b$$ $$toggle::<::>::<>$$ b THEN\n' +
+                      '  min := a\n' +
+                      'ELSE\n' +
+                      '  min := b\n' +
+                      'ENDIF';
         var parson;
 
         $(document).ready(function(){
