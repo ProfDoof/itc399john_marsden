@@ -25,7 +25,7 @@
   box-sizing: content-box;
 }
 ul.output {
-    background-color: #FFA;
+    background-color: #efefff;
 }
 .sortable-code li {
     -moz-border-radius:10px;
@@ -78,12 +78,12 @@ li.correctPosition, .testcase.pass {
 .testcase .error { color: red;}
 .testcase .feedback { font-weight: bolder;}
 .testcase .fail .expected, .testcase .fail .actual {
-    color: red; 
+    color: red;
     font-weight: bolder;
 }
-.testcase .output { 
-    display: block; 
-    white-space: pre; 
+.testcase .output {
+    display: block;
+    white-space: pre;
     background-color: #555555;
     color: white;
     font-size: 12px;

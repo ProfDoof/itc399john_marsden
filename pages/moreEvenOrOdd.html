@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Simple js-parsons example assignment</title>
+        <link href="../parsons.css" rel="stylesheet" />
+        <link href="../lib/prettify.css" rel="stylesheet" />
+        <link href="../default.css" rel="stylesheet" />
+        <script src="../lib/prettify.js"></script>
+    </head>
+    <body>
+        <h2>Parsons Problem</h2>
+        <p>Instructions</p>
+        <div id="sortableTrash" class="sortable-code"></div>
+        <div id="sortable" class="sortable-code"></div>
+        <div style="clear:both;"></div>
+        <div id="unittest"></div>
+        <script src="../lib/jquery.min.js"></script>
+        <script src="../lib/jquery-ui.min.js"></script>
+        <script src="../lib/jquery.ui.touch-punch.min.js"></script>
+        <script src="../lib/underscore-min.js"></script>
+        <script src="../lib/lis.js"></script>
+        <script src="../parsons.js"></script>
+        <script src="../lib/skulpt.js"></script>
+        <script src="../lib/skulpt-stdlib.js"></script>
+        <script>
+        var initial =
+        var parson;
+
+        $(document).ready(function(){
+            parson = new ParsonsWidget({
+                'sortableId': 'sortable',
+                'trashId': 'sortableTrash',
+                'max_wrong_lines': 1,
+                'vartests': [{initcode: "a = 0\nb = 0", code: "", message: "Testing with a = 0 ja b = 0", variables: {b: 0}}],
+                'grader': ParsonsWidget._graders.LanguageTranslationGrader,
+                'programmingLang': "pseudo",
+                'executable_code': "a = 0\n" +
+                      "b = 0\n" +
+                      "a = input(\'Enter Number: \')\n" +
+                      "while $$toggle$$ != 0:\n" +
+                      "  if $$toggle$$ $$toggle::<::>::!=$$ 0:\n" +
+                      "    min = a\n" +
+                      "  else:\n" +
+                      "    min = b\n" +
+                      "  a = input(\'Enter Number: \')\n" +
+                      "print(\'\')\n" +
+                      "if $$toggle$$ $$toggle::<::>::!=$$ 0:\n" +
+                      "  print(\'Positive\')\n" +
+                      "elif $$toggle$$ $$toggle::<::>::!=$$ 0:\n" +
+                      "  print(\'Negative\')\n" +
+                      "else:\n" +
+                      "  print(\'Equal\')\n"
+
+            });
+            parson.init(initial);
+            parson.shuffleLines();
+        });
+        </script>
+    </body>
+</html>
