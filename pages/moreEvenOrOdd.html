@@ -23,7 +23,27 @@
         <script src="../lib/skulpt.js"></script>
         <script src="../lib/skulpt-stdlib.js"></script>
         <script>
-        var initial =
+        var initial = "a = 0\n" +
+                      "b = 0\n" +
+                      "PRINT \'Enter Number: \'\n" +
+                      "READ FROM INPUT INTO a\n" +
+                      "WHILE $$toggle::a::b$$ != 0\n" +
+                      "  IF $$toggle::a::b$$ $$toggle::<::>::!=$$ 0 THEN\n" +
+                      "    b++\n" +
+                      "  ELSE\n" +
+                      "    b--\n" +
+                      "  ENDIF\n" +
+                      "  PRINT \'Enter Number: \'\n" +
+                      "  READ FROM INPUT INTO a\n" +
+                      "ENDWHILE\n" +
+                      "PRINT \'\'\n" +
+                      "IF $$toggle::a::b$$ $$toggle::<::>::!=$$ 0 THEN\n" +
+                      "  PRINT \'Positive\'\n" +
+                      "ELSE IF $$toggle::a::b$$ $$toggle::<::>::!=$$ 0\n" +
+                      "  PRINT \'Negative\'\n" +
+                      "ELSE\n" +
+                      "  PRINT \'Equal\'\n" +
+                      "ENDIF\n";
         var parson;
 
         $(document).ready(function(){
