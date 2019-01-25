@@ -1,8 +1,24 @@
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+body {
+	background-color: #9e9eaa;
+  font-family: Georgia;
+}
 
+a.button {
+    color: white;
+    padding: 10px 50px;
     text-decoration: none;
-    color: initial;
+    font-size: 16px;
+}
+
+a {
+  border: solid 1px black;
+  border-radius: 17px;
+  height: 20px;
+  width: 60px;
+  background-color: black;
+  float: right;
+  text-align: center;
+  position: fixed;
+  bottom: 10;
+  margin-bottom: 10px;
 }
