@@ -19,6 +19,7 @@ a {
   float: right;
   text-align: center;
   position: fixed;
-  bottom: 10;
+  right: 10px;
+  bottom: 10px;
   margin-bottom: 10px;
 }
