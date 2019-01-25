@@ -1,6 +1,8 @@
 body {
-	background-color: #9e9eaa;
-  font-family: Georgia;
+	background-color: whitesmoke;
+	font-family: Lucida Grande, Verdana, Sans-serif;
+	color: #353535;
+	padding-bottom: 40px;
 }
 
 a.button {
@@ -10,16 +12,47 @@ a.button {
     font-size: 16px;
 }
 
-a {
+a.button {
   border: solid 1px black;
   border-radius: 17px;
   height: 20px;
   width: 60px;
-  background-color: black;
+  background-color: #30055C;
+	position: relative;
   float: right;
+	bottom: 10px;
+	right: 10px;
   text-align: center;
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  margin-bottom: 10px;
+}
+
+.cmd {
+	font-size: 90%;
+	background-color: black;
+	color: white;
+	padding: 3px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.input {
+	color: red;
+}
+
+h2 {
+	font-size: 120%;
+	background-color: #30055C;
+	color: white;
+	padding-left: 5;
+	padding-bottom: 2;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+}
+
+.footer {
+	height: 40px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-sizing: border-box;
 }

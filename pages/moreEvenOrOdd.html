@@ -7,9 +7,49 @@
         <link href="../default.css" rel="stylesheet" />
         <script src="../lib/prettify.js"></script>
     </head>
-    <body>
-        <h2>Parsons Problem</h2>
-        <p>Instructions</p>
+    <body class=morePos>
+        <h2>More Positive or Negative</h2>
+        <p>Write a program that prompts the user to enter a series of integer values
+        terminating in 0. When the input is done, report whether there were
+        more positive than negative values ("Positive"),
+        more negative than positive values ("Negative"),
+        or an equal number of positive and negative values ("Equal").
+        Note that we do not want the sum of the numbers,
+        just a comparison of the relative count of positive vs. negative numbers.
+        </p>
+        <!--
+        <p>
+        Your solution must use a <b>while</b> loop.
+        </p>
+        -->
+        <p>Your program should run like the examples shown below:</p>
+
+        <pre class=cmd>
+        Enter number: <span class=input>2</span>
+        Enter number: <span class=input>-35</span>
+        Enter number: <span class=input>7</span>
+        Enter number: <span class=input>0</span>
+
+        Positive</pre>
+
+        <p>
+        In the first example (above): there are two positive numbers (2,7) and
+        one negative number (-35), so there are more positive numbers than negative,
+        as indicated in the output.
+        </p>
+
+        <pre class=cmd>
+        Enter number: <span class=input>0</span>
+
+        Equal</pre>
+
+        <pre class=cmd>
+        Enter number: <span class=input>-3</span>
+        Enter number: <span class=input>-10</span>
+        Enter number: <span class=input>-5</span>
+        Enter number: <span class=input>0</span>
+
+        Negative</pre>
         <div id="sortableTrash" class="sortable-code"></div>
         <div id="sortable" class="sortable-code"></div>
         <div style="clear:both;"></div>
