@@ -34,22 +34,25 @@ body {
 }
 
 a.button {
-
-}
-
-a.button {
   border: solid 1px black;
   border-radius: 17px;
   height: 20px;
   width: 60px;
   background-color: #30055C;
-  float: right;
   text-align: center;
 	margin: 10px;
 	color: white;
 	padding: 10px 50px;
 	text-decoration: none;
 	font-size: 16px;
+}
+
+a.button.right {
+  float: right;
+}
+
+a.button.left {
+  float: left;
 }
 
 .cmd {
