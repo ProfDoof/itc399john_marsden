@@ -44,6 +44,32 @@
               parson.shuffleLines();
           });
           </script>
+        <h2>Indentation and Input</h2>
+        <p>You can change the indentation of blocks by dragging them
+        over to the right or left inside of the area in which you
+        construct your program. Use the READ FROM INPUT INTO block to see
+        how you can change the tabbing. The READ FROM INPUT INTO block
+        reads input from the console into the variable stated in the
+        block.</p>
+        <div id="sortableTrashRead" class="sortable-code"></div>
+        <div id="sortableRead" class="sortable-code">
+        </div>
+        <script>
+        var initial = 'READ FROM INPUT INTO input';
+        var parson;
+
+        $(document).ready(function(){
+            parson = new ParsonsWidget({
+                'sortableId': 'sortableRead',
+                'trashId': 'sortableTrashRead',
+                'max_wrong_lines': 1,
+                'grader': ParsonsWidget._graders.LanguageTranslationGrader,
+                'programmingLang': "pseudo"
+            });
+            parson.init(initial);
+            parson.shuffleLines();
+        });
+        </script>
         </div>
         <div id="footer">
           <a href="./pages/ifExample.html" class="button right">Next</a>
