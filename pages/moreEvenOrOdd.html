@@ -73,7 +73,7 @@ Negative</pre>
              "PRINT \'Enter Number: \'\n" +
              "READ FROM INPUT INTO input\n" +
              "WHILE $$toggle::input::positive::negative$$ != 0\n" +
-             "  IF $$toggle::input::positive::negative$$ $$toggle::<::>::!=$$ 0 THEN\n" +
+             "  IF $$toggle::input::positive::negative$$ $$toggle::<::>::!=::==::<=::>=$$ 0 THEN\n" +
              "    positive++\n" +
              "  ELSE\n" +
              "    negative++\n" +
@@ -82,9 +82,9 @@ Negative</pre>
              "  READ FROM INPUT INTO input\n" +
              "ENDWHILE\n" +
              "PRINT \'\'\n" +
-             "IF $$toggle::input::positive::negative$$ $$toggle::<::>::!=$$ $$toggle::input::positive::negative$$ THEN\n" +
+             "IF $$toggle::input::positive::negative$$ $$toggle::<::>::!=::==::<=::>=$$ $$toggle::input::positive::negative$$ THEN\n" +
              "  PRINT \'Positive\'\n" +
-             "ELSE IF $$toggle::input::positive::negative$$ $$toggle::<::>::!=$$ $$toggle::input::positive::negative$$\n" +
+             "ELSE IF $$toggle::input::positive::negative$$ $$toggle::<::>::!=::==::<=::>=$$ $$toggle::input::positive::negative$$\n" +
              "  PRINT \'Negative\'\n" +
              "ELSE\n" +
              "  PRINT \'Equal\'\n" +
