@@ -11,10 +11,15 @@
     <body>
       <div id="container">
         <div id="header">
-          <h2>Hello World</h2>
+          <h2>Indentation and Input</h2>
         </div>
         <div id="body">
-          <p>You can construct Hello World by moving the PRINT piece over to the other side. PRINT outputs to the console.</p>
+          <p>You can change the indentation of blocks by dragging them
+          over to the right or left inside of the area in which you
+          construct your program. Use the READ FROM INPUT INTO block to see
+          how you can change the tabbing. The READ FROM INPUT INTO block
+          reads input from the console into the variable stated in the
+          block.</p>
           <div id="sortableTrash" class="sortable-code"></div>
           <div id="sortable" class="sortable-code">
           </div>
@@ -29,13 +34,13 @@
           <script src="./lib/skulpt.js"></script>
           <script src="./lib/skulpt-stdlib.js"></script>
           <script>
-          var initial = 'PRINT \'Hello, World!\'';
+          var initial = 'READ FROM INPUT INTO input';
           var parson;
 
           $(document).ready(function(){
               parson = new ParsonsWidget({
-                  'sortableId': 'sortable',
-                  'trashId': 'sortableTrash',
+                  'sortableId': 'sortableRead',
+                  'trashId': 'sortableTrashRead',
                   'max_wrong_lines': 1,
                   'grader': ParsonsWidget._graders.LanguageTranslationGrader,
                   'programmingLang': "pseudo"
@@ -46,7 +51,8 @@
           </script>
         </div>
         <div id="footer">
-          <a href="./pages/indentExample.html" class="button right">Next</a>
+          <a href="../index.html" class="button left">Previous</a>
+          <a href="./ifExample.html" class="button right">Next</a>
         </div>
       </div>
     </body>
