@@ -11,18 +11,14 @@
     <body>
       <div id="container">
         <div id="header">
-          <h2>If Statement Example</h2>
+          <h2>While Statement Example</h2>
         </div>
         <div id="body">
-          <p>You can construct an IF statement by placing the IF block and
-            ENDIF block.
-            Any ELSE or ELSE IF block goes between the IF and ENDIF blocks and is lined up with them.
-            Don't forget to indent anything inside of the IF statement over by 1.
-            You can change the <span class=jsparson-toggle></span> into
-            the appropriate symbols for the operation you are attempting
-            to perform.
-            For this program construct an IF statement that will set min
-            equal to the smaller of two variables a and b.</p>
+          <p>You can construct a WHILE statement by placing the WHILE block and
+            the ENDWHILE block.
+            Don't forget to indent anything inside of a WHILE loop over by 1.
+            For this program construct a WHILE loop that will output
+            1 through 10.</p>
           <div id="sortableTrash" class="sortable-code"></div>
           <div id="sortable" class="sortable-code">
           </div>
@@ -37,11 +33,11 @@
           <script src="../lib/skulpt.js"></script>
           <script src="../lib/skulpt-stdlib.js"></script>
           <script>
-          var initial = 'IF $$toggle::a::b$$ $$toggle::<::>::<>$$ b THEN\n' +
-                        '  min := a\n' +
-                        'ELSE\n' +
-                        '  min := b\n' +
-                        'ENDIF';
+          var initial = 'a = 1\n' +
+                        'WHILE a $$toggle::<::>::<=::>=::==::!=$$ 10\n' +
+                        '  PRINT a\n' +
+                        '  a++\n' +
+                        'ENDWHILE';
           var parson;
 
           $(document).ready(function(){
@@ -53,10 +49,11 @@
                       {initcode: "min = None\na = 7\nb = 4\n", code: "", message: "Testing with a = 7 ja b = 4",
                         variables: {min: 4}}],
                   'grader': ParsonsWidget._graders.LanguageTranslationGrader,
-                  'executable_code': "if $$toggle$$ $$toggle::<::>::!=$$ b:\n" +
-                        "min = a\n" +
-                        "else:\n" +
-                        "min = b\n  pass",
+                  'executable_code': "a = 1\n"
+                        "while a $$toggle::<::>::<=::>=::==::!=$$ 10:\n" +
+                        "print(a)\n" +
+                        "a+=1\n"
+                        "pass",
                   'programmingLang': "pseudo"
               });
               parson.init(initial);
@@ -65,8 +62,8 @@
           </script>
         </div>
         <div id="footer">
-          <a href="./indentExample.html" class="button left">Previous</a>
-          <a href="./whileExample.html" class="button right">Next</a>
+          <a href="./ifExample.html" class="button left">Previous</a>
+          <a href="./moreEvenOrOdd.html" class="button right">Next</a>
         </div>
       </div>
     </body>
