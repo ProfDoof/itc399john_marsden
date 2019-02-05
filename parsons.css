@@ -12,7 +12,7 @@
     font-size: 120%;
     font-family: monospace;
     list-style: none;
-    background-color: #efefff;
+    background-color: #dbdbec;
     padding-bottom: 10px;
     padding-left: 0;
     margin-left: 0;
@@ -25,7 +25,7 @@
   box-sizing: content-box;
 }
 ul.output {
-    background-color: #efefff;
+    background-color: #dbdbec;
 }
 .sortable-code li {
     -moz-border-radius:10px;
