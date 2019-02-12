@@ -11,11 +11,23 @@
     <body>
       <div id="container">
         <div id="header">
-          <h2>Hello World</h2>
+          <h2>An Intro to the PRINT and READ FROM INPUT INTO blocks</h2>
         </div>
         <div id="body">
-          <p>The PRINT block outputs the other information inside the block to the console. </p>
-          <p>Please construct Hello World by moving the PRINT piece over to the other side.</p>
+          <p>The PRINT block outputs anything else inside the PRINT block
+            to the console. </p>
+          <p>The READ FROM INPUT INTO block
+            reads input from the console into the variable stated in the
+            block.</p>
+          <p>The indentation of the blocks can be changed by dragging them
+            over to the right or left inside of the area in which you
+            construct your program.</p>
+          <p>Construct a program which will output "Hello, World!"
+            to the console and then print a name that was read in by the
+            READ FROM INPUT INTO block</p>
+          <p>This can be done by moving the two PRINT pieces and the
+            READ FROM INPUT INTO piece to the area that has
+            "Construct your program here" above it.</p>
           <div id="sortableTrash" class="sortable-code"></div>
           <div id="sortable" class="sortable-code">
           </div>
@@ -30,7 +42,9 @@
           <script src="./lib/skulpt.js"></script>
           <script src="./lib/skulpt-stdlib.js"></script>
           <script>
-          var initial = 'PRINT \'Hello, World!\'';
+          var initial = 'PRINT \'Hello, World!\'\n' +
+                        'READ FROM INPUT INTO name \n' +
+                        'PRINT name';
           var parson;
 
           $(document).ready(function(){
@@ -47,7 +61,7 @@
           </script>
         </div>
         <div id="footer">
-          <a href="./pages/indentExample.html" class="button right">Next</a>
+          <a href="./pages/ifExample.html" class="button right">Next</a>
         </div>
       </div>
     </body>
