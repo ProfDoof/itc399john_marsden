@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Tutorial</title>
+    <link href="../parsons.css" rel="stylesheet" />
+    <link href="../lib/prettify.css" rel="stylesheet" />
+    <link href="../default.css" rel="stylesheet" />
+    <script src="../lib/prettify.js"></script>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h2>Intro to the [IF], [ENDIF], [ELSE], and [ELSE IF] blocks</h2>
+        </div>
+        <div id="body">
+            <h3>Seeing if this causes any sort of change</h3>
+            <p>
+                You can smile.
+            </p>
+            <p>
+                All [ELSE] and [ELSE IF] blocks associated with the [IF] statement you
+                created should be placed between the [IF] and [ENDIF] blocks.
+            </p>
+            <p>
+                <b>REMINDER:</b> Anything inside of the [IF] statement (besides the
+                [ELSE] or [ELSE IF] blocks) should be indented to the right relative to
+                the [IF] block.
+            </p>
+            <p>
+                Clicking the <span class=jsparson-toggle></span> boxes will cycle
+                the <span class=jsparson-toggle></span> boxes through whatever
+                options it has.
+            </p>
+            <hr>
+            <h3>Instructions</h3>
+            <p>
+                For this program construct an [IF] statement that will set min
+                equal to the smaller of two variables a and b.
+            </p>
+            <div id="sortableTrash" class="sortable-code"></div>
+            <div id="sortable" class="sortable-code">
+            </div>
+            <div style="clear:both;"></div>
+            <div id="unittest"></div>
+            <script src="../lib/jquery.min.js"></script>
+            <script src="../lib/jquery-ui.min.js"></script>
+            <script src="../lib/jquery.ui.touch-punch.min.js"></script>
+            <script src="../lib/underscore-min.js"></script>
+            <script src="../lib/lis.js"></script>
+            <script src="../parsons.js"></script>
+            <script src="../lib/skulpt.js"></script>
+            <script src="../lib/skulpt-stdlib.js"></script>
+            <script>
+          var initial = 'IF $$toggle::a::b$$ $$toggle::<::>::<>$$ b THEN\n' +
+                        '  min = a\n' +
+                        'ELSE\n' +
+                        '  min = b\n' +
+                        'ENDIF';
+          var parson;
+
+          $(document).ready(function(){
+              parson = new ParsonsWidget({
+                  'sortableId': 'sortable',
+                  'trashId': 'sortableTrash',
+                  'max_wrong_lines': 1,
+                  'vartests': [{initcode: "min = None\na = 0\nb = 2", code: "", message: "Testing with a = 0 ja b = 2", variables: {min: 0}},
+                      {initcode: "min = None\na = 7\nb = 4\n", code: "", message: "Testing with a = 7 ja b = 4",
+                        variables: {min: 4}}],
+                  'grader': ParsonsWidget._graders.LanguageTranslationGrader,
+                  'executable_code': "if $$toggle$$ $$toggle::<::>::!=$$ b:\n" +
+                        "min = a\n" +
+                        "else:\n" +
+                        "min = b\n  pass",
+                  'programmingLang': "pseudo"
+              });
+              parson.init(initial);
+              parson.shuffleLines();
+          });
+            </script>
+        </div>
+        <div id="footer">
+            <a href="../index.html" class="button left">Previous</a>
+            <a href="./whileExample.html" class="button right">Next</a>
+        </div>
+    </div>
+</body>
+</html>
